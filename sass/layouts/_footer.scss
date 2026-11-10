@@ -1,0 +1,29 @@
+@use '../utils';
+
+footer {
+  @extend %site-bar;
+  text-align: center;
+
+  .container {
+    @extend %layout-container;
+  }
+  .footer-title {
+    color: utils.$accent-color;
+    font-size: 24px;
+  }
+
+  address {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    font-style: normal;
+    line-height: 1.5;
+
+    a {
+      @include utils.link-underline;
+    }
+  }
+}

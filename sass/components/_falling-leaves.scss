@@ -1,0 +1,71 @@
+.falling-leaves {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+
+  span {
+    position: absolute;
+    top: -40px;
+    font-size: 28px;
+    animation: falling-leaves 6s linear infinite;
+
+    &:nth-child(1) {
+      left: 15%;
+      animation-delay: -2s;
+    }
+
+    &:nth-child(2) {
+      left: 40%;
+      animation-delay: -5s;
+    }
+    &:nth-child(3) {
+      left: 60%;
+      animation-delay: -1s;
+    }
+
+    &:nth-child(4) {
+      left: 75%;
+      animation-delay: -4s;
+    }
+
+    &:nth-child(5) {
+      left: 90%;
+      animation-delay: -3s;
+    }
+  }
+}
+@keyframes falling-leaves {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(calc((100vh + 40px) * 0.25)) translateX(30px)
+      rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(calc((100vh + 40px) * 0.5)) translateX(-30px)
+      rotate(90deg);
+  }
+
+  75% {
+    transform: translateY(calc((100vh + 40px) * 0.75)) translateX(30px)
+      rotate(135deg);
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(calc(100vh + 40px)) translateX(0) rotate(180deg);
+  }
+}

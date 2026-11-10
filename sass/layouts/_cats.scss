@@ -1,0 +1,39 @@
+@use '../utils';
+
+.cats {
+  @extend %section-base;
+  background-color: utils.$light-pink;
+
+  .section-title {
+    @include utils.heading(utils.$font-size-section-title);
+  }
+}
+
+.cats-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+  list-style: none;
+
+  & > li {
+    flex-basis: 400px;
+    flex-shrink: 0;
+    position: relative;
+  }
+
+  img {
+    border: utils.$photo-border;
+    margin-bottom: 12px;
+  }
+
+  h3 {
+    color: utils.$accent-color;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 6px 12px;
+    background-color: utils.$light-pink;
+    border: utils.$border-pink;
+  }
+}

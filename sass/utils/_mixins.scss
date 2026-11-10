@@ -1,0 +1,21 @@
+@use 'vars';
+
+@mixin link-underline($color: vars.$accent-color) {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition:
+    color vars.$transition-duration ease,
+    text-decoration-color vars.$transition-duration ease;
+
+  &:hover,
+  &:focus {
+    text-decoration-color: $color;
+  }
+}
+
+@mixin heading($font-size) {
+  color: vars.$accent-color;
+  font-size: $font-size;
+  text-align: center;
+  margin-bottom: 24px;
+}

@@ -1,0 +1,7 @@
+@use '../utils';
+
+.logo {
+  color: utils.$accent-color;
+  font-size: 24px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,14 @@
+@use '../utils';
+
+.education {
+  @extend %section-base;
+  background: linear-gradient(to right, utils.$light-pink 20%, #f7cadc 80%);
+
+  .section-title {
+    @include utils.heading(utils.$font-size-section-title);
+  }
+
+  h2 + p {
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,509 @@
+:root {
+  --light-pink: #ffe6f2;
+  --text-color: #46343d;
+  --accent-color: #844c65;
+  --layout-pink: #e7b9c9;
+  --border-color: #d8acbe;
+  --white-color: #fff9fc;
+  --border-pink: 2px solid var(--border-color);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+p,
+h1,
+h2,
+h3,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+footer {
+  background-color: var(--layout-pink);
+  color: var(--text-color);
+  text-align: left;
+  border: var(--border-pink);
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  color: var(--text-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--accent-color);
+  text-decoration: underline;
+  outline: none;
+}
+
+.logo,
+.footer-title {
+  color: var(--accent-color);
+  font-size: 24px;
+}
+
+nav {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.header-list {
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.aboutme,
+.education,
+.hobby,
+.cats,
+.questionnaire,
+.tables {
+  color: var(--text-color);
+  font-size: 18px;
+  line-height: 1.5;
+  border: var(--border-pink);
+}
+
+.aboutme,
+.cats,
+.questionnaire,
+.hobby,
+.tables {
+  background-color: var(--light-pink);
+}
+
+.hobby h2 ~ p {
+  font-weight: 700;
+}
+
+.aboutme p::first-letter {
+  color: var(--accent-color);
+  font-size: 36px;
+}
+
+.education {
+  background: linear-gradient(to right, var(--light-pink) 20%, #f7cadc 80%);
+}
+
+.education h2 + p {
+  font-weight: 700;
+}
+
+.hobby {
+  background-image: linear-gradient(#f8dff2bf, #f3d0f191);
+}
+
+.hobby .container {
+  background-image: url('../images/books-cat.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+}
+
+.page-title,
+.questionnaire h1 {
+  color: var(--accent-color);
+  font-size: 36px;
+  text-align: center;
+}
+
+.section-title {
+  color: var(--accent-color);
+  font-size: 28px;
+  text-align: center;
+}
+
+h3 {
+  color: var(--accent-color);
+}
+
+.list-books {
+  list-style: square;
+}
+
+.cats-list {
+  list-style: none;
+}
+
+/* Цей селектор має найбільшу специфічність (0, 2, 1)*/
+.list-books li:first-child {
+  font-weight: 700;
+}
+
+/* Цей селектор також має найбільшу специфічність (0, 2, 1)*/
+.list-books li:last-child {
+  font-style: italic;
+}
+
+img {
+  border: 5px ridge var(--border-color);
+}
+
+.questionnaire h1::after {
+  content: '✦';
+  color: var(--layout-pink);
+}
+
+fieldset {
+  background-color: var(--white-color);
+  border: var(--border-pink);
+}
+
+legend {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+form > label {
+  font-weight: 700;
+}
+
+:where(
+  input[type='text'],
+  input[type='date'],
+  input[type='email'],
+  input[type='password'],
+  input[type='file'],
+  select,
+  textarea
+) {
+  border: var(--border-pink);
+}
+
+:where(
+  input[type='text'],
+  input[type='date'],
+  input[type='email'],
+  input[type='password'],
+  input[type='file'],
+  select,
+  textarea
+):focus {
+  border: 2px solid var(--accent-color);
+  outline: none;
+}
+
+button {
+  background-color: var(--layout-pink);
+  color: var(--text-color);
+  border: var(--border-pink);
+  font-size: 16px;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  outline: none;
+}
+
+textarea {
+  background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--accent-color);
+}
+
+fieldset label:has(input:checked) {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: var(--border-pink);
+}
+
+th {
+  text-align: center;
+}
+
+.tables h1,
+.tables h2 {
+  color: var(--accent-color);
+}
+
+.tables .no-bottom-border {
+  border-bottom: none;
+}
+
+.tables .no-top-border {
+  border-top: none;
+}
+
+header,
+section,
+footer {
+  padding: 20px 0;
+}
+
+.page-title,
+.section-title,
+.list-books {
+  margin-bottom: 24px;
+}
+
+p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.cats-list img {
+  margin-bottom: 12px;
+}
+
+.hobby .section-title {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 300px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4px 8px;
+  background-color: var(--light-pink);
+  border: var(--border-pink);
+}
+
+.cats-list li {
+  position: relative;
+}
+
+.cats-list h3 {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 12px;
+  background-color: var(--light-pink);
+  border: var(--border-pink);
+}
+
+.back-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: var(--layout-pink);
+  color: var(--text-color);
+  border: var(--border-pink);
+  border-radius: 50%;
+  font-size: 26px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background-color 500ms ease,
+    color 500ms ease;
+}
+
+.aboutme img {
+  display: block;
+  margin: 0 auto;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+  background-color: var(--accent-color);
+  color: var(--white-color);
+}
+
+header .container,
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-list {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo,
+.header-list > li {
+  flex-shrink: 0;
+}
+
+header nav {
+  flex-grow: 1;
+}
+
+.header-list,
+footer address {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+footer address {
+  flex-wrap: wrap;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.list-books,
+.list-games {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-books {
+  gap: 16px;
+  padding-left: 24px;
+}
+
+.list-games {
+  gap: 24px;
+}
+
+.list-games > li {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+}
+
+.list-games h3,
+.cats-list > li {
+  flex-shrink: 0;
+}
+
+.list-games h3 {
+  flex-basis: 300px;
+}
+
+.list-games p {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.cats-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.cats-list > li {
+  flex-basis: 400px;
+}
+
+.header-list a,
+footer address a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition:
+    color 500ms ease,
+    text-decoration-color 500ms ease;
+}
+
+.header-list a:hover,
+.header-list a:focus,
+footer address a:hover,
+footer address a:focus {
+  text-decoration-color: var(--accent-color);
+}
+
+.falling-leaves {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.falling-leaves span {
+  position: absolute;
+  top: -40px;
+  font-size: 28px;
+  animation: falling-leaves 6s linear infinite;
+}
+
+.falling-leaves span:nth-child(1) {
+  left: 15%;
+  animation-delay: -2s;
+}
+
+.falling-leaves span:nth-child(2) {
+  left: 40%;
+  animation-delay: -5s;
+}
+
+.falling-leaves span:nth-child(3) {
+  left: 60%;
+  animation-delay: -1s;
+}
+
+.falling-leaves span:nth-child(4) {
+  left: 75%;
+  animation-delay: -4s;
+}
+
+.falling-leaves span:nth-child(5) {
+  left: 90%;
+  animation-delay: -3s;
+}
+
+@keyframes falling-leaves {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(calc((100vh + 40px) * 0.25)) translateX(30px)
+      rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(calc((100vh + 40px) * 0.5)) translateX(-30px)
+      rotate(90deg);
+  }
+
+  75% {
+    transform: translateY(calc((100vh + 40px) * 0.75)) translateX(30px)
+      rotate(135deg);
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(calc(100vh + 40px)) translateX(0) rotate(180deg);
+  }
+}

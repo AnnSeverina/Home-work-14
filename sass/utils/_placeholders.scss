@@ -1,0 +1,27 @@
+@use 'vars';
+
+%layout-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+%section-base {
+  color: vars.$text-color;
+  font-size: vars.$font-size-text;
+  line-height: 1.5;
+  border: vars.$border-pink;
+  padding: vars.$block-padding-y 0;
+
+  p:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+%site-bar {
+  background-color: vars.$layout-pink;
+  color: vars.$text-color;
+  border: vars.$border-pink;
+  padding: vars.$block-padding-y 0;
+}

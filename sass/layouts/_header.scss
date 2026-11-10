@@ -1,0 +1,33 @@
+@use '../utils';
+
+header {
+  @extend %site-bar;
+  text-align: left;
+
+  .container {
+    @extend %layout-container;
+  }
+
+  nav {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 1.5;
+  }
+}
+
+.header-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+
+  & > li {
+    flex-shrink: 0;
+  }
+
+  a {
+    @include utils.link-underline;
+  }
+}

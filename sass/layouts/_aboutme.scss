@@ -1,0 +1,21 @@
+@use '../utils';
+
+.aboutme {
+  @extend %section-base;
+  background-color: utils.$light-pink;
+
+  .page-title {
+    @include utils.heading(36px);
+  }
+
+  p::first-letter {
+    color: utils.$accent-color;
+    font-size: 36px;
+  }
+
+  img {
+    border: utils.$photo-border;
+    display: block;
+    margin: 0 auto;
+  }
+}
