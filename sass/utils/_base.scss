@@ -16,7 +16,7 @@ ol {
 
 a {
   color: vars.$text-color;
-  font-weight: 700;
+  font-weight: vars.$font-weight-bold;
   text-decoration: none;
 
   &:hover,

@@ -1,0 +1,77 @@
+@use '../utils';
+
+.questionnaire {
+  @extend %section-base;
+  background-color: utils.$light-pink;
+
+  h1 {
+    color: utils.$accent-color;
+    font-size: 36px;
+    text-align: center;
+
+    &::after {
+      content: '✦';
+      color: utils.$layout-pink;
+    }
+  }
+
+  fieldset {
+    background-color: utils.$white-color;
+    border: utils.$border-pink;
+
+    label:has(input:checked) {
+      color: utils.$accent-color;
+      font-weight: utils.$font-weight-bold;
+    }
+  }
+
+  legend {
+    color: utils.$accent-color;
+    font-weight: utils.$font-weight-bold;
+  }
+
+  form > label {
+    font-weight: utils.$font-weight-bold;
+  }
+
+  :where(
+    input[type='text'],
+    input[type='date'],
+    input[type='email'],
+    input[type='password'],
+    input[type='file'],
+    select,
+    textarea
+  ) {
+    border: utils.$border-pink;
+
+    &:focus {
+      border: 2px solid utils.$accent-color;
+      outline: none;
+    }
+  }
+
+  textarea {
+    background-color: utils.$white-color;
+    color: utils.$text-color;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: utils.$accent-color;
+  }
+
+  button {
+    background-color: utils.$layout-pink;
+    color: utils.$text-color;
+    border: utils.$border-pink;
+    font-size: 16px;
+
+    &:hover,
+    &:focus {
+      background-color: utils.$accent-color;
+      color: utils.$white-color;
+      outline: none;
+    }
+  }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: "Montserrat", sans-serif;
 }
@@ -32,14 +33,14 @@ footer .container, header .container {
   gap: 24px;
 }
 
-.cats, .hobby, .education, .aboutme {
+.tables, .questionnaire, .cats, .hobby, .education, .aboutme {
   color: #46343d;
   font-size: 18px;
   line-height: 1.5;
   border: 2px solid #d8acbe;
   padding: 20px 0;
 }
-.cats p:not(:last-child), .hobby p:not(:last-child), .education p:not(:last-child), .aboutme p:not(:last-child) {
+.tables p:not(:last-child), .questionnaire p:not(:last-child), .cats p:not(:last-child), .hobby p:not(:last-child), .education p:not(:last-child), .aboutme p:not(:last-child) {
   margin-bottom: 16px;
 }
 
@@ -238,6 +239,96 @@ footer address a:hover, footer address a:focus {
   padding: 6px 12px;
   background-color: #ffe6f2;
   border: 2px solid #d8acbe;
+}
+
+.questionnaire {
+  background-color: #ffe6f2;
+}
+.questionnaire h1 {
+  color: #844c65;
+  font-size: 36px;
+  text-align: center;
+}
+.questionnaire h1::after {
+  content: "✦";
+  color: #e7b9c9;
+}
+.questionnaire fieldset {
+  background-color: #fff9fc;
+  border: 2px solid #d8acbe;
+}
+.questionnaire fieldset label:has(input:checked) {
+  color: #844c65;
+  font-weight: 700;
+}
+.questionnaire legend {
+  color: #844c65;
+  font-weight: 700;
+}
+.questionnaire form > label {
+  font-weight: 700;
+}
+.questionnaire :where(input[type=text],
+input[type=date],
+input[type=email],
+input[type=password],
+input[type=file],
+select,
+textarea) {
+  border: 2px solid #d8acbe;
+}
+.questionnaire :where(input[type=text],
+input[type=date],
+input[type=email],
+input[type=password],
+input[type=file],
+select,
+textarea):focus {
+  border: 2px solid #844c65;
+  outline: none;
+}
+.questionnaire textarea {
+  background-color: #fff9fc;
+  color: #46343d;
+}
+.questionnaire input::placeholder,
+.questionnaire textarea::placeholder {
+  color: #844c65;
+}
+.questionnaire button {
+  background-color: #e7b9c9;
+  color: #46343d;
+  border: 2px solid #d8acbe;
+  font-size: 16px;
+}
+.questionnaire button:hover, .questionnaire button:focus {
+  background-color: #844c65;
+  color: #fff9fc;
+  outline: none;
+}
+
+.tables {
+  background-color: #ffe6f2;
+}
+.tables h1,
+.tables h2 {
+  color: #844c65;
+}
+.tables table {
+  border-collapse: collapse;
+}
+.tables th,
+.tables td {
+  border: 2px solid #d8acbe;
+}
+.tables th {
+  text-align: center;
+}
+.tables th.no-bottom-border {
+  border-bottom: none;
+}
+.tables th.no-top-border {
+  border-top: none;
 }
 
 .logo {

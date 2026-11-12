@@ -13,7 +13,7 @@
   }
 
   h2 ~ p {
-    font-weight: 700;
+    font-weight: utils.$font-weight-bold;
   }
 
   .section-title {
@@ -46,7 +46,7 @@
 
   li {
     &:first-child {
-      font-weight: 700;
+      font-weight: utils.$font-weight-bold;
     }
 
     &:last-child {

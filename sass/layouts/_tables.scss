@@ -1,0 +1,32 @@
+@use '../utils';
+
+.tables {
+  @extend %section-base;
+  background-color: utils.$light-pink;
+
+  h1,
+  h2 {
+    color: utils.$accent-color;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    border: utils.$border-pink;
+  }
+
+  th {
+    text-align: center;
+
+    &.no-bottom-border {
+      border-bottom: none;
+    }
+
+    &.no-top-border {
+      border-top: none;
+    }
+  }
+}
